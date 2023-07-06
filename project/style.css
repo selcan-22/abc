@@ -1,0 +1,270 @@
+/*variables*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+#published-items {
+  height: 100vh;
+  position: relative;
+}
+
+.latest-published-items {
+  margin: 80px 7% 0px;
+  position: absolute;
+}
+.latest-published-items .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.latest-published-items .heading h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.latest-published-items .heading .list {
+  display: flex;
+}
+.latest-published-items .heading .list #all {
+  background-color: #FF1616;
+  padding: 10px 25px;
+  border-radius: 20px;
+  color: white;
+  margin-left: 10px;
+  border: 1px solid #EEE1E0;
+  cursor: pointer;
+}
+.latest-published-items .heading .list #horror,
+.latest-published-items .heading .list #science,
+.latest-published-items .heading .list #history,
+.latest-published-items .heading .list #thriller {
+  padding: 10px 25px;
+  border-radius: 20px;
+  margin-left: 10px;
+  border: 1px solid #EEE1E0;
+  cursor: pointer;
+}
+
+.item2,
+.item3,
+.item1,
+.item4,
+.item5 {
+  position: absolute;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.cards .card {
+  border: 1px solid #EEE1E0;
+  margin-top: 15px;
+  margin-right: 16px;
+}
+.cards .card:hover {
+  cursor: pointer;
+  box-shadow: 0px 6px 28px 0px #dcb7b7;
+  transition: 0.7s;
+}
+.cards .card:hover .moon {
+  color: #FF1616;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.cards .card-content {
+  margin: 15px 15px 0px 15px;
+}
+.cards .card-content .moon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+.cards .card-content span {
+  color: #9498A7;
+  font-size: 14px;
+  margin-top: -10px;
+}
+.cards .reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .reviews .review .stars {
+  font-size: 14px;
+}
+.cards .reviews .review p {
+  color: #9498A7;
+  font-size: 14px;
+}
+.cards .reviews .review p span {
+  color: #FF1616;
+}
+.cards .reviews .price {
+  font-size: 25px;
+  font-weight: bold;
+  color: #FF1616;
+}
+
+.browse-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.browse-btn button {
+  padding: 18px 30px;
+  border-radius: 35px;
+  border: 1px solid #FF1616;
+  background: linear-gradient(to top, white 50%, #FF1616 50%) bottom;
+  background-size: 300% 200%;
+  transition: 0.4s;
+  font-size: 20px;
+  color: #FF1616;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.browse-btn button:hover {
+  background-position: top left;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .latest-published-items .heading {
+    display: block;
+  }
+  .featured {
+    flex-direction: column;
+    max-width: 900px;
+  }
+  .featured-left {
+    width: 100%;
+  }
+  .cards {
+    justify-content: space-around;
+  }
+  .featured-right img {
+    width: 360px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 750px) {
+  .latest-published-items .heading .list {
+    flex-direction: column;
+    width: 60%;
+  }
+  .latest-published-items .heading .list .change {
+    margin-bottom: 15px;
+  }
+}
+/*                      */
+.featured {
+  margin: 80px 7% 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featured .featured-left {
+  width: 73%;
+  max-width: 1000px;
+}
+.featured .featured-left .featured-left-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featured .featured-left .featured-left-top h1 {
+  font-size: 30px;
+}
+.featured .featured-left .featured-left-top p {
+  font-size: 16px;
+  position: relative;
+}
+.featured .featured-left .featured-left-top p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #9498A7;
+  bottom: -10px;
+  left: 0;
+}
+.featured .featured-left .featured-left-top p:hover {
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.7s;
+  letter-spacing: 1px;
+}
+.featured .featured-left .featured-slider {
+  display: flex;
+  background-color: #FF1616;
+  position: relative;
+}
+.featured .featured-left .featured-slider .angles {
+  position: absolute;
+  left: 0px;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featured .featured-left .featured-slider .angles i {
+  font-size: 35px;
+  margin: 20px;
+}
+.featured .featured-left .featured-slider .angles i:hover {
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.featured .featured-left .featured-slider section {
+  display: flex;
+}
+.featured .featured-left .featured-slider img {
+  margin: 26px 30px 26px 80px;
+}
+.featured .featured-left .featured-slider .content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featured .featured-left .featured-slider .content .name h1 {
+  font-size: 35px;
+}
+.featured .featured-left .featured-slider .content .book-review {
+  font-size: 18px;
+}
+.featured .featured-left .featured-slider .content .book-review .stars {
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+}
+.featured .featured-left .featured-slider .content button {
+  padding: 18px 30px;
+  border-radius: 35px;
+  border: 1px solid white;
+  background: linear-gradient(to top, #FF1616 50%, white 50%) bottom;
+  background-size: 300% 200%;
+  transition: 0.4s;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.featured .featured-left .featured-slider .content button:hover {
+  background-position: top left;
+  color: #FF1616;
+  cursor: pointer;
+}
+.featured .featured-right {
+  width: 26%;
+}/*# sourceMappingURL=style.css.map */
